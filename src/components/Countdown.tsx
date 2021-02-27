@@ -1,7 +1,9 @@
 import {useContext} from 'react';
 import { CountdownContext } from '../contexts/CountdownContext';
 import styles from './../styles/components/Countdown.module.css';
-
+import {BsFillPlayFill} from 'react-icons/bs'
+import {GrFormClose} from 'react-icons/gr'
+import {AiFillCheckCircle} from 'react-icons/ai'
 
 export function Countdown(){
     const {
@@ -34,6 +36,7 @@ export function Countdown(){
                     disabled
                     className={styles.countdownButton}>
                     Ciclo encerrado
+                    <AiFillCheckCircle color="var(--green)" font-size="1.6rem" />
                 </button>
             ) : (
                 <>
@@ -42,14 +45,16 @@ export function Countdown(){
                             type="button" 
                             className={`${styles.countdownButton} ${styles.countdownButtonActive}`}
                             onClick={resetCountdown}>
-                            Abandonar ciclo
+                            Abandonar ciclo 
+                            <GrFormClose font-size="1.6rem" color="inherit"/>
                         </button>
                     )  : (
                         <button 
                             type="button" 
                             className={styles.countdownButton}
                             onClick={startCountdown}>
-                            Iniciar um ciclo
+                            Iniciar um ciclo 
+                            <BsFillPlayFill font-size="1.6rem"/>
                         </button> 
                     )}
                 </>
