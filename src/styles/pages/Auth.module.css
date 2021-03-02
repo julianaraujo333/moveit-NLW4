@@ -1,0 +1,93 @@
+.AuthContainer{
+    height: 100vh;
+    margin: 0 auto;
+    background: var(--blue);
+    color: var(--white);    
+}
+
+
+.AuthContainer main{
+    max-width: 85%;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-top: 4em;
+}
+
+.AuthContainer main img{
+    max-width: 100%;
+}
+
+.AuthContainer main > img{
+    width: 350px;
+    margin-bottom: 2.5em;
+}
+
+.backgroundImage{
+    display: none;
+}
+
+.credentials{
+    display: flex;
+    width: 100%;
+}
+
+.credentials button{
+    padding: 1em;
+
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background: var(--blue-dark);
+
+    transition: background-color 0.2s;
+}
+
+.credentials button:hover,
+.credentials button:focus{
+    background: var(--green);
+}
+
+.credentials input{
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    padding: 1em;
+    color: #B2B9FF;
+    background:  linear-gradient(90deg, #4953B8 0%, rgba(73, 83, 184, 0.2) 100%);
+}
+
+.textGroup{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5em;
+
+    color: #B2B9FF;
+}
+
+.textGroup img{
+    margin-right: 15px;
+}
+
+.AuthContainer h3{
+    font-size: 2rem;
+    margin-bottom: 1em;
+}
+
+
+@media (min-width: 700px){
+    .AuthContainer > div {
+        max-width: 1500px;
+        margin: 0 auto;
+    
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-content: center;
+    }
+
+    .backgroundImage{
+        display: block;
+    }
+}
+
